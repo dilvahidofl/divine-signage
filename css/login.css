@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -11,7 +13,10 @@ body {
   color: #222;
 }
 
-.login-container { width: 100%; padding: 20px; }
+.login-container {
+  width: 100%;
+  padding: 20px;
+}
 
 .login-card {
   width: 100%;
@@ -20,11 +25,19 @@ body {
   background: white;
   padding: 35px;
   border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,.10);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
 }
 
-h1 { margin: 0; text-align: center; }
-.subtitle { text-align: center; color: #777; margin: 8px 0 30px; }
+h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin: 8px 0 30px;
+}
 
 label {
   display: block;
@@ -61,7 +74,9 @@ form button[type="submit"] {
   color: white;
 }
 
-form button[type="submit"]:hover { background: #444; }
+form button[type="submit"]:hover {
+  background: #444;
+}
 
 .message {
   min-height: 20px;
