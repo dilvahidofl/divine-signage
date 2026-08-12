@@ -2,158 +2,70 @@
 
 body {
   margin: 0;
-  background: #f3f4f6;
+  min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  color: #222;
-}
-
-.topbar {
-  background: #222;
-  color: white;
-  padding: 16px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topbar h1 { margin: 0 0 4px; font-size: 22px; }
-.topbar span { color: #bbb; font-size: 13px; }
-
-.container { max-width: 1100px; margin: 35px auto; padding: 0 20px; }
-
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.page-header h2 { margin: 0 0 5px; }
-.page-header p { margin: 0; color: #777; }
-
-.primary-button {
-  background: #222;
-  color: white;
-}
-
-.primary-button:hover { background: #444; }
-
-.secondary-button {
-  background: #e5e7eb;
-  color: #222;
-}
-
-.logout-button {
-  background: white;
-  color: #222;
-}
-
-.table-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(0,0,0,.07);
-  overflow: hidden;
-}
-
-.table-wrapper { overflow-x: auto; }
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  min-width: 650px;
-}
-
-th, td {
-  text-align: left;
-  padding: 15px;
-  border-bottom: 1px solid #eee;
-}
-
-th {
-  background: #fafafa;
-  font-size: 14px;
-}
-
-.action-button {
-  padding: 7px 11px;
-  margin-right: 5px;
-  font-size: 13px;
-}
-
-.edit-button { background: #e5e7eb; }
-.delete-button { background: #fbe0e0; color: #a00000; }
-
-.empty-message {
-  display: none;
-  text-align: center;
-  padding: 30px;
-  color: #777;
-}
-
-.modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.5);
+  background: #f1f3f6;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  color: #222;
 }
 
-.hidden { display: none; }
+.login-container { width: 100%; padding: 20px; }
 
-.modal-card {
+.login-card {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
+  margin: auto;
   background: white;
-  border-radius: 10px;
-  padding: 25px;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.10);
 }
 
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-}
+h1 { margin: 0; text-align: center; }
+.subtitle { text-align: center; color: #777; margin: 8px 0 30px; }
 
-.modal-header h2 { margin: 0; }
-
-.close-button {
-  background: transparent;
-  font-size: 26px;
-  padding: 0 5px;
-}
-
-.modal-card label {
+label {
   display: block;
-  margin: 14px 0 6px;
+  margin: 15px 0 7px;
   font-weight: 600;
 }
 
-.modal-card input {
+input {
   width: 100%;
-  padding: 11px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 7px;
+  font-size: 15px;
 }
 
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
+input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+button {
+  border: 0;
+  border-radius: 7px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+form button[type="submit"] {
+  width: 100%;
   margin-top: 22px;
+  background: #222;
+  color: white;
 }
 
-.form-message {
-  min-height: 18px;
+form button[type="submit"]:hover { background: #444; }
+
+.message {
+  min-height: 20px;
+  margin: 12px 0 0;
+  text-align: center;
   color: #c62828;
-  margin: 10px 0 0;
-}
-
-@media (max-width: 600px) {
-  .topbar { padding: 15px; }
-  .container { margin-top: 25px; }
-  .page-header { align-items: flex-start; flex-direction: column; }
 }
