@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Signage - Admin</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Divine Signage</h1>
+      <span>Admin Panel</span>
+    </div>
+    <button id="logoutButton" class="logout-button">Logout</button>
+  </header>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h2>User Management</h2>
+        <p>Manage system users.</p>
+      </div>
+      <button id="addUserButton" class="primary-button">+ Add User</button>
+    </div>
+
+    <section class="table-card">
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="userTableBody"></tbody>
+        </table>
+      </div>
+      <p id="emptyMessage" class="empty-message">No users found.</p>
+    </section>
+  </main>
+
+  <div id="userModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modalTitle">Add User</h2>
+        <button id="closeModalButton" class="close-button">&times;</button>
+      </div>
+
+      <form id="userForm">
+        <input type="hidden" id="editIndex">
+
+        <label for="name">Name</label>
+        <input type="text" id="name" required>
+
+        <label for="newUsername">Username</label>
+        <input type="text" id="newUsername" required>
+
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" required>
+
+        <p id="formMessage" class="form-message"></p>
+
+        <div class="form-actions">
+          <button type="button" id="cancelButton" class="secondary-button">Cancel</button>
+          <button type="submit" class="primary-button">Save User</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
